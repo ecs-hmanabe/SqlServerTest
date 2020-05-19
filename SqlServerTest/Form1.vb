@@ -62,10 +62,8 @@ Public Class Form1
             "insert Students " &
             "values('" & TextBoxStudentID.Text & "','" & TextBoxFirstName.Text & "','" & TextBoxLastName.Text & "','" & TextBoxBirthday.Text & "','" & TextBoxGender.Text & "');"
         sqlcon.ExecuteTransaction(SQL)
-        Dim dt As DataTable = sqlcon.DataTable
 
-        DataGridView1.DataSource = dt
-
+        FormClear()
         DataGridSelect()
 
     End Sub
@@ -94,10 +92,8 @@ Public Class Form1
 "Where " & vbCrLf &
 "StudentID = '" & TextBoxStudentID.Text & "';"
         sqlcon.ExecuteTransaction(SQL)
-        Dim dt As DataTable = sqlcon.DataTable
 
-        DataGridView1.DataSource = dt
-
+        FormClear()
         DataGridSelect()
     End Sub
 
@@ -115,14 +111,13 @@ Public Class Form1
 "Where " & vbCrLf &
 "StudentID = '" & TextBoxStudentID.Text & "';"
         sqlcon.ExecuteTransaction(SQL)
-        Dim dt As DataTable = sqlcon.DataTable
 
-        DataGridView1.DataSource = dt
 
+        FormClear()
         DataGridSelect()
     End Sub
 
-    Private Sub formclear()
+    Private Sub FormClear()
         TextBoxStudentID.Text = ""
         TextBoxFirstName.Text = ""
         TextBoxLastName.Text = ""
