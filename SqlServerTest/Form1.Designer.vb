@@ -26,8 +26,21 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.ButtonSELECT = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TextBoxStudentID = New System.Windows.Forms.TextBox()
+        Me.TextBoxFirstName = New System.Windows.Forms.TextBox()
+        Me.TextBoxLastName = New System.Windows.Forms.TextBox()
+        Me.TextBoxBirthday = New System.Windows.Forms.TextBox()
+        Me.LabelStudentID = New System.Windows.Forms.Label()
+        Me.LabelFirstName = New System.Windows.Forms.Label()
+        Me.LabelLastName = New System.Windows.Forms.Label()
+        Me.LabelBirthday = New System.Windows.Forms.Label()
+        Me.LabelGender = New System.Windows.Forms.Label()
+        Me.TextBoxGender = New System.Windows.Forms.TextBox()
+        Me.ButtonINSERT = New System.Windows.Forms.Button()
+        Me.ButtonUPDATE = New System.Windows.Forms.Button()
+        Me.ButtonDELETE = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -63,34 +76,157 @@ Partial Class Form1
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Label1"
         '
-        'Button2
+        'ButtonSELECT
         '
-        Me.Button2.Location = New System.Drawing.Point(12, 91)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(171, 23)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "SQLSERVER TEST"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.ButtonSELECT.Location = New System.Drawing.Point(12, 91)
+        Me.ButtonSELECT.Name = "ButtonSELECT"
+        Me.ButtonSELECT.Size = New System.Drawing.Size(171, 23)
+        Me.ButtonSELECT.TabIndex = 4
+        Me.ButtonSELECT.Text = "SELECT"
+        Me.ButtonSELECT.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(15, 121)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 137)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowTemplate.Height = 21
-        Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(776, 301)
         Me.DataGridView1.TabIndex = 5
+        '
+        'TextBoxStudentID
+        '
+        Me.TextBoxStudentID.Location = New System.Drawing.Point(334, 6)
+        Me.TextBoxStudentID.Name = "TextBoxStudentID"
+        Me.TextBoxStudentID.Size = New System.Drawing.Size(100, 19)
+        Me.TextBoxStudentID.TabIndex = 6
+        '
+        'TextBoxFirstName
+        '
+        Me.TextBoxFirstName.Location = New System.Drawing.Point(334, 31)
+        Me.TextBoxFirstName.Name = "TextBoxFirstName"
+        Me.TextBoxFirstName.Size = New System.Drawing.Size(100, 19)
+        Me.TextBoxFirstName.TabIndex = 7
+        '
+        'TextBoxLastName
+        '
+        Me.TextBoxLastName.Location = New System.Drawing.Point(334, 56)
+        Me.TextBoxLastName.Name = "TextBoxLastName"
+        Me.TextBoxLastName.Size = New System.Drawing.Size(100, 19)
+        Me.TextBoxLastName.TabIndex = 8
+        '
+        'TextBoxBirthday
+        '
+        Me.TextBoxBirthday.Location = New System.Drawing.Point(334, 81)
+        Me.TextBoxBirthday.Name = "TextBoxBirthday"
+        Me.TextBoxBirthday.Size = New System.Drawing.Size(100, 19)
+        Me.TextBoxBirthday.TabIndex = 9
+        '
+        'LabelStudentID
+        '
+        Me.LabelStudentID.AutoSize = True
+        Me.LabelStudentID.Location = New System.Drawing.Point(258, 9)
+        Me.LabelStudentID.Name = "LabelStudentID"
+        Me.LabelStudentID.Size = New System.Drawing.Size(55, 12)
+        Me.LabelStudentID.TabIndex = 10
+        Me.LabelStudentID.Text = "StudentID"
+        '
+        'LabelFirstName
+        '
+        Me.LabelFirstName.AutoSize = True
+        Me.LabelFirstName.Location = New System.Drawing.Point(255, 34)
+        Me.LabelFirstName.Name = "LabelFirstName"
+        Me.LabelFirstName.Size = New System.Drawing.Size(58, 12)
+        Me.LabelFirstName.TabIndex = 11
+        Me.LabelFirstName.Text = "FirstName"
+        '
+        'LabelLastName
+        '
+        Me.LabelLastName.AutoSize = True
+        Me.LabelLastName.Location = New System.Drawing.Point(253, 59)
+        Me.LabelLastName.Name = "LabelLastName"
+        Me.LabelLastName.Size = New System.Drawing.Size(56, 12)
+        Me.LabelLastName.TabIndex = 12
+        Me.LabelLastName.Text = "LastName"
+        '
+        'LabelBirthday
+        '
+        Me.LabelBirthday.AutoSize = True
+        Me.LabelBirthday.Location = New System.Drawing.Point(253, 84)
+        Me.LabelBirthday.Name = "LabelBirthday"
+        Me.LabelBirthday.Size = New System.Drawing.Size(75, 12)
+        Me.LabelBirthday.TabIndex = 13
+        Me.LabelBirthday.Text = "LabelBirthday"
+        '
+        'LabelGender
+        '
+        Me.LabelGender.AutoSize = True
+        Me.LabelGender.Location = New System.Drawing.Point(255, 109)
+        Me.LabelGender.Name = "LabelGender"
+        Me.LabelGender.Size = New System.Drawing.Size(41, 12)
+        Me.LabelGender.TabIndex = 14
+        Me.LabelGender.Text = "Gender"
+        '
+        'TextBoxGender
+        '
+        Me.TextBoxGender.Location = New System.Drawing.Point(334, 106)
+        Me.TextBoxGender.Name = "TextBoxGender"
+        Me.TextBoxGender.Size = New System.Drawing.Size(100, 19)
+        Me.TextBoxGender.TabIndex = 15
+        '
+        'ButtonINSERT
+        '
+        Me.ButtonINSERT.Location = New System.Drawing.Point(440, 54)
+        Me.ButtonINSERT.Name = "ButtonINSERT"
+        Me.ButtonINSERT.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonINSERT.TabIndex = 16
+        Me.ButtonINSERT.Text = "登録"
+        Me.ButtonINSERT.UseVisualStyleBackColor = True
+        '
+        'ButtonUPDATE
+        '
+        Me.ButtonUPDATE.Location = New System.Drawing.Point(440, 79)
+        Me.ButtonUPDATE.Name = "ButtonUPDATE"
+        Me.ButtonUPDATE.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonUPDATE.TabIndex = 17
+        Me.ButtonUPDATE.Text = "更新"
+        Me.ButtonUPDATE.UseVisualStyleBackColor = True
+        '
+        'ButtonDELETE
+        '
+        Me.ButtonDELETE.Location = New System.Drawing.Point(440, 104)
+        Me.ButtonDELETE.Name = "ButtonDELETE"
+        Me.ButtonDELETE.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonDELETE.TabIndex = 18
+        Me.ButtonDELETE.Text = "削除"
+        Me.ButtonDELETE.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.LabelStudentID)
+        Me.Controls.Add(Me.LabelFirstName)
+        Me.Controls.Add(Me.LabelLastName)
+        Me.Controls.Add(Me.LabelBirthday)
+        Me.Controls.Add(Me.LabelGender)
+        Me.Controls.Add(Me.TextBoxStudentID)
+        Me.Controls.Add(Me.TextBoxFirstName)
+        Me.Controls.Add(Me.TextBoxLastName)
+        Me.Controls.Add(Me.TextBoxBirthday)
+        Me.Controls.Add(Me.TextBoxGender)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.ButtonINSERT)
+        Me.Controls.Add(Me.ButtonUPDATE)
+        Me.Controls.Add(Me.ButtonDELETE)
+        Me.Controls.Add(Me.ButtonSELECT)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Button1)
@@ -107,6 +243,19 @@ Partial Class Form1
     Friend WithEvents Button1 As Button
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents ButtonSELECT As Button
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents TextBoxStudentID As TextBox
+    Friend WithEvents TextBoxFirstName As TextBox
+    Friend WithEvents TextBoxLastName As TextBox
+    Friend WithEvents TextBoxBirthday As TextBox
+    Friend WithEvents LabelStudentID As Label
+    Friend WithEvents LabelFirstName As Label
+    Friend WithEvents LabelLastName As Label
+    Friend WithEvents LabelBirthday As Label
+    Friend WithEvents LabelGender As Label
+    Friend WithEvents TextBoxGender As TextBox
+    Friend WithEvents ButtonINSERT As Button
+    Friend WithEvents ButtonUPDATE As Button
+    Friend WithEvents ButtonDELETE As Button
 End Class

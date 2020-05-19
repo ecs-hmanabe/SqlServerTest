@@ -205,8 +205,10 @@ Public Class Class_SQLSERVER
             ExecuteNonQuery(e_SQL)
 
         Catch ex As Exception
+            MsgBox(ex.Message)
             Rollback()
             result = False
+            Return False
         End Try
 
         'トランザクションが終了していない場合Falseを返す
