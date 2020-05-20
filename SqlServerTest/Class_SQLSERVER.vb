@@ -10,8 +10,8 @@ Public Class Class_SQLSERVER
     Private _DataTable As New DataTable()
     '－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
     Public Sub New()
-        Dim ServerName As String = "DESKTOP-RV74K59" 'サーバー名(またはIPアドレス)
-        Dim DatabaseName As String = "ecsTest" 'データベース
+        Dim ServerName As String = My.Settings.ServerName 'サーバー名(またはIPアドレス)
+        Dim DatabaseName As String = My.Settings.DatabaseName 'データベース
         Dim St As String
         St = "Server=" & ServerName & ";"
         St &= "integrated security=SSPI;"
