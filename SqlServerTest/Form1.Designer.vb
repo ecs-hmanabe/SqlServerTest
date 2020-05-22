@@ -41,6 +41,7 @@ Partial Class Form1
         Me.ButtonINSERT = New System.Windows.Forms.Button()
         Me.ButtonUPDATE = New System.Windows.Forms.Button()
         Me.ButtonDELETE = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -160,9 +161,9 @@ Partial Class Form1
         Me.LabelBirthday.AutoSize = True
         Me.LabelBirthday.Location = New System.Drawing.Point(253, 84)
         Me.LabelBirthday.Name = "LabelBirthday"
-        Me.LabelBirthday.Size = New System.Drawing.Size(75, 12)
+        Me.LabelBirthday.Size = New System.Drawing.Size(48, 12)
         Me.LabelBirthday.TabIndex = 13
-        Me.LabelBirthday.Text = "LabelBirthday"
+        Me.LabelBirthday.Text = "Birthday"
         '
         'LabelGender
         '
@@ -207,11 +208,21 @@ Partial Class Form1
         Me.ButtonDELETE.Text = "削除"
         Me.ButtonDELETE.UseVisualStyleBackColor = True
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(674, 64)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(114, 23)
+        Me.Button3.TabIndex = 20
+        Me.Button3.Text = "遷移"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.LabelStudentID)
         Me.Controls.Add(Me.LabelFirstName)
         Me.Controls.Add(Me.LabelLastName)
@@ -258,4 +269,5 @@ Partial Class Form1
     Friend WithEvents ButtonINSERT As Button
     Friend WithEvents ButtonUPDATE As Button
     Friend WithEvents ButtonDELETE As Button
+    Friend WithEvents Button3 As Button
 End Class

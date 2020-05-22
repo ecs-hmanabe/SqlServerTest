@@ -124,4 +124,8 @@ Public Class Form1
         TextBoxBirthday.Text = ""
         TextBoxGender.Text = ""
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Form2.ShowDialog()
+    End Sub
 End Class
